@@ -91,7 +91,7 @@ def get_images_list(path1, k=None):
         return np.array(total_list1[:k])
 
 
-class AIIMS_Dataset(Dataset):
+class GlaS_Dataset(Dataset):
     def __init__(self, image1_dir, image1_list, transform=None):
         self.image1_dir = image1_dir
         self.image1_list = image1_list
@@ -131,8 +131,8 @@ def load_transformed_dataset():
     train_index = idxs[:split]
     valid_index = idxs[split:]
 
-    train_dataset = AIIMS_Dataset(TRAIN_IMAGE_DIR, img1_list[train_index], transform=data_transform)
-    eval_dataset = AIIMS_Dataset(TRAIN_IMAGE_DIR, img1_list[valid_index], transform=data_transform)
+    train_dataset = GlaS_Dataset(TRAIN_IMAGE_DIR, img1_list[train_index], transform=data_transform)
+    eval_dataset = GlaS_Dataset(TRAIN_IMAGE_DIR, img1_list[valid_index], transform=data_transform)
 
     return train_dataset, eval_dataset
 
