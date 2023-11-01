@@ -8,6 +8,28 @@ import os
 import cv2
 
 
+class WFLoss(nn.Module):
+    def __init__(self, gamma, weight=1.0):
+        super(WFLoss, self).__init__()
+        self.gamma = gamma
+        self.weight = weight
+        self.LCE = CELoss()
+
+    def forward(self, y_pred, y_true):
+        '''
+            y_true shape: NxCxHxW
+            y_pred shape: NxCxHxW
+            '''
+
+        lce = self.LCE(y_pred, y_true)
+
+        N = y_true.shape[0] * y_true.shape[2] * y_true.shape[3]
+        loss = -self.weight * lce * torch.pow((y_pred - 1), self.gamma) * y_true * torch.log(y_pred)
+        wf_loss = torch.sum(loss) / N
+
+        return wf_loss
+
+
 class FLoss(nn.Module):
     def __init__(self, gamma, weight=1.0):
         super(FLoss, self).__init__()
