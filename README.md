@@ -13,6 +13,8 @@ This is the official repository for the implementation of (paper link)
   <em>Fig-1: An overview of the proposed framework. (a) Self-supervised pre-training using diffusion: The U-Net model (encoder-decoder) takes the corrupted version $\mathbf{x}_t$ of the image $\mathbf{x}_0$ and the corresponding time embedding $t_e$ as the input to predict the noise that takes $\mathbf{x}_0$ to $\mathbf{x}_t$, using the P2 weighted loss. $f(\cdot)$ denotes the function that recovers $\mathbf{x}_{t-1}$ from $\mathbf{x}_t$. (b) Downstream segmentation: The self-supervised pre-trained U-Net is fine-tuned end-to-end in a supervised manner to predict the segmentation masks.</em>
 </p>
 
+# Pretrain
+<pre> CUDA_VISIBLE_DEVICES=0,1,2,3 python3 ./GenSelfDiff/pretrain/SS_diff.py </pre>
 # Acknowledgment
 The code implementation has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023)
 # Citation
