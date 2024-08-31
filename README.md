@@ -28,7 +28,7 @@ One can run the following script metric evaluation on the downstream segmentatio
 <pre> python3 ./GenSelfDiff/test/test_script.py </pre>
 
 # Baselines
-The git-hub repositories for some of the baselines are: [CS-CO](https://github.com/easonyang1996/CS-CO/tree/main), | [Wolleb et al.](https://github.com/JuliaWolleb/Diffusion-based-Segmentation/tree/main)
+The git-hub repositories for some of the baselines are: [CS-CO](https://github.com/easonyang1996/CS-CO/tree/main) | [Wolleb et al.](https://github.com/JuliaWolleb/Diffusion-based-Segmentation/tree/main) | [Baranchuk et al.](https://github.com/yandex-research/ddpm-segmentation/tree/master) | [CIMD](https://github.com/aimansnigdha/Ambiguous-Medical-Image-Segmentation-using-Diffusion-Models) | [MedSegDiff](https://github.com/MedicineToken/MedSegDiff) | [FCT](https://github.com/Thanos-DB/FullyConvolutionalTransformer)
 
 # Acknowledgment
 The code implementation has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023)
