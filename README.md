@@ -13,9 +13,15 @@ This is the official repository for the implementation of (paper link)
   <em>Fig-1: An overview of the proposed framework. (a) Self-supervised pre-training using diffusion: The U-Net model (encoder-decoder) takes the corrupted version $\mathbf{x}_t$ of the image $\mathbf{x}_0$ and the corresponding time embedding $t_e$ as the input to predict the noise that takes $\mathbf{x}_0$ to $\mathbf{x}_t$, using the P2 weighted loss. $f(\cdot)$ denotes the function that recovers $\mathbf{x}_{t-1}$ from $\mathbf{x}_t$. (b) Downstream segmentation: The self-supervised pre-trained U-Net is fine-tuned end-to-end in a supervised manner to predict the segmentation masks.</em>
 </p>
 
+# Pre-process
+
 # Pretrain
-One can run the following script using multi-gpus for generative self-supervision using diffusion. Change the path of the unlabeled images directory on which we need to pretrain on, in the script ./GenSelfDiff/pretrain/utils.py. 
+One can run the following script using multi-gpus for generative self-supervision using diffusion. Change the path of the unlabeled images directory on which we need to pretrain on, in the script "./GenSelfDiff/pretrain/utils.py". 
 <pre> CUDA_VISIBLE_DEVICES=0,1,2,3 python3 ./GenSelfDiff/pretrain/SS_diff.py </pre>
+
+# Downstream train
+One can run the following script using multi-gpus for the downstream segmentation task on the pretrained generative self-supervision using diffusion. Change the path of the images, labels, and pre-trained model in the script "./GenSelfDiff/downstream_train/Diff_Seg.py". 
+<pre> CUDA_VISIBLE_DEVICES=0,1,2,3 python3 ./GenSelfDiff/downstream_train/Diff_Seg.py </pre>
 
 # Acknowledgment
 The code implementation has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023)
