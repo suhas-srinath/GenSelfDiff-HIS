@@ -14,7 +14,9 @@ This is the official repository for the implementation of (paper link)
 </p>
 
 # Pretrain
-<pre> ```CUDA_VISIBLE_DEVICES=0,1,2,3 python3 ./GenSelfDiff/pretrain/SS_diff.py``` </pre>
+One can run the following script using multi-gpus for generative self-supervision using diffusion. Change the path of the unlabeled images directory on which we need to pretrain on, in the script ./GenSelfDiff/pretrain/utils.py. 
+<pre> CUDA_VISIBLE_DEVICES=0,1,2,3 python3 ./GenSelfDiff/pretrain/SS_diff.py </pre>
+
 # Acknowledgment
 The code implementation has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023)
 # Citation
