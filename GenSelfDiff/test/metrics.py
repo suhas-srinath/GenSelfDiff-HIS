@@ -6,7 +6,7 @@ from sklearn.metrics import precision_score, accuracy_score, recall_score, f1_sc
 from sklearn.metrics import confusion_matrix
 from scipy.spatial.distance import directed_hausdorff
 
-start = 1
+start = 1 # This is set to 0 if class:0 (background in our case) is to included as one class in the metric computation, Otherwise it is set to 1
 
 
 def dice_coef(y_true, y_pred):
