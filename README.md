@@ -14,5 +14,5 @@ This is the official repository for the implementation of (paper link)
 </p>
 
 # Acknowledgment
-
+The code implementation has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023)
 # Citation
