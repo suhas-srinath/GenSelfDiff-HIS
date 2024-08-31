@@ -1,4 +1,4 @@
-# GenSelfDiff-HIS: Generative Self-Supervision Using Diffusion for Histopathological Image Segmentation (TMI)
+# GenSelfDiff-HIS: Generative Self-Supervision Using Diffusion for Histopathological Image Segmentation (TMI 2024)
 This is the official repository for the implementation of (paper link)
 
 # Abstract
