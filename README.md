@@ -6,6 +6,7 @@ This is the official repository for the implementation of (paper link)
 
 <p align="center">
 <img width="578" alt="diff_model" src="https://github.com/PurmaVishnuVardhanReddy/GenSelfDiff-HIS/assets/103281951/c6d68807-bafe-4589-aef6-d337a185b588">
+ <em>image_caption</em>
 </p>
 
 # Acknowledgment
