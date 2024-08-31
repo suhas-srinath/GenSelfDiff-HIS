@@ -23,9 +23,12 @@ One can run the following script using multi-gpus for generative self-supervisio
 One can run the following script using multi-gpus for the downstream segmentation task on the pretrained generative self-supervision using diffusion. Change the path of the images, labels, and pre-trained model in the script "./GenSelfDiff/downstream_train/Diff_Seg.py". 
 <pre> CUDA_VISIBLE_DEVICES=0,1,2,3 python3 ./GenSelfDiff/downstream_train/Diff_Seg.py </pre>
 
-# Test
+# Evaluation
 One can run the following script metric evaluation on the downstream segmentation train model. Change the path of the images, labels, and downstream model in the script "./GenSelfDiff/test/test_script.py". 
 <pre> python3 ./GenSelfDiff/test/test_script.py </pre>
+
+# Baselines
+The git-hub for the some of the baselines are: [CS-CO](https://github.com/easonyang1996/CS-CO/tree/main), [Wolleb et al.] (https://github.com/JuliaWolleb/Diffusion-based-Segmentation/tree/main), [Baranchuk et al.] (https://github.com/yandex-research/ddpm-segmentation/tree/master), [CIMD] (https://github.com/aimansnigdha/Ambiguous-Medical-Image-Segmentation-using-Diffusion-Models), [MedSegDiff] (https://github.com/MedicineToken/MedSegDiff), [FCT] (https://github.com/Thanos-DB/FullyConvolutionalTransformer)
 
 # Acknowledgment
 The code implementation has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023)
