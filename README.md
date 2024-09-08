@@ -10,7 +10,7 @@ This is the official repository for the implementation of [GenSelfDiff-HIS](http
  </p>
  
  <p align="center">
-  <em>Fig-1: An overview of the proposed framework. (a) **Self-supervised pre-training using diffusion:** The U-Net model (encoder-decoder) takes the corrupted version $mathbf{x}_t$  of the image $\mathbf{x}_0$ and the corresponding time embedding $t_e$ as the input to predict the noise that takes $\mathbf{x}_0$ to $\mathbf{x}_t$, using the P2 weighted loss. $f(\cdot)$ denotes the function that recovers $\mathbf{x}_{t-1}$ from $\mathbf{x}_t$. (b) **Downstream segmentation:** The self-supervised pre-trained U-Net is fine-tuned end-to-end in a supervised manner to predict the segmentation masks.</em>
+  <em>Fig-1: An overview of the proposed framework. __(a)__ Self-supervised pre-training using diffusion: The U-Net model (encoder-decoder) takes the corrupted version $mathbf{x}_t$  of the image $\mathbf{x}_0$ and the corresponding time embedding $t_e$ as the input to predict the noise that takes $\mathbf{x}_0$ to $\mathbf{x}_t$, using the P2 weighted loss. $f(\cdot)$ denotes the function that recovers $\mathbf{x}_{t-1}$ from $\mathbf{x}_t$. (b) Downstream segmentation: The self-supervised pre-trained U-Net is fine-tuned end-to-end in a supervised manner to predict the segmentation masks.</em>
 </p>
 
 # Pre-process
