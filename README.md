@@ -33,3 +33,15 @@ The git-hub repositories for some of the baselines are: [CS-CO](https://github.c
 # Acknowledgment
 The code implementation has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023)
 # Citation
+<pre>
+@ARTICLE{10663482,
+  author={Purma, Vishnuvardhan and Srinath, Suhas and Srirangarajan, Seshan and Kakkar, Aanchal and Prathosh, A.P.},
+  journal={IEEE Transactions on Medical Imaging}, 
+  title={GenSelfDiff-HIS: Generative Self-Supervision Using Diffusion for Histopathological Image Segmentation}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Task analysis;Image segmentation;Diffusion models;Biomedical imaging;Annotations;Image analysis;Histopathology;Diffusion;H&E-stained Histopathological Images;Representation Learning;Self-Supervised Learning},
+  doi={10.1109/TMI.2024.3453492}}
+</pre>
