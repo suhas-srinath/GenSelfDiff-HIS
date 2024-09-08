@@ -1,3 +1,5 @@
+# This script is used to obtain the train image patches from the full scale train images
+
 from PIL import Image
 from torchvision.transforms import transforms
 import torch
