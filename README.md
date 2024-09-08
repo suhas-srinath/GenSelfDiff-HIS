@@ -1,5 +1,5 @@
 # GenSelfDiff-HIS: Generative Self-Supervision Using Diffusion for Histopathological Image Segmentation (TMI 2024)
-This is the official repository for the implementation of [GenSelfDiff-HIS](https://ieeexplore.ieee.org/abstract/document/10663482)
+This is the official repository for the implementation of [GenSelfDiff-HIS](https://ieeexplore.ieee.org/abstract/document/10663482) by Vishnuvardhan Purma, Suhas Srinath, Seshan Srirangarajan, Aanchal Kakkar, and Prathosh AP.
 
 # Abstract
  Histopathological image segmentation is a laborious and time-intensive task, often requiring analysis from experienced pathologists for accurate examinations. To reduce this burden, supervised machine-learning approaches have been adopted using large-scale annotated datasets for histopathological image analysis. However, in several scenarios, the availability of large-scale annotated data is a bottleneck while training such models. Self-supervised learning (SSL) is an alternative paradigm that provides some respite by constructing models utilizing only the unannotated data which is often abundant. The basic idea of SSL is to train a network to perform one or many pseudo or pretext tasks on unannotated data and use it subsequently as the basis for a variety of downstream tasks. It is seen that the success of SSL depends critically on the considered pretext task. While there have been many efforts in designing pretext tasks for classification problems, there have not been many attempts on SSL for histopathological image segmentation. Motivated by this, we propose an SSL approach for segmenting histopathological images via generative diffusion models. Our method is based on the observation that diffusion models effectively solve an image-to-image translation task akin to a segmentation task. Hence, we propose generative diffusion as the pretext task for histopathological image segmentation. We also utilize a multi-loss function-based fine-tuning for the downstream task. We validate our method using several metrics on two publicly available datasets along with a newly proposed head and neck (HN) cancer dataset containing Hematoxylin and Eosin (H&E) stained images along with annotations.
@@ -14,6 +14,7 @@ This is the official repository for the implementation of [GenSelfDiff-HIS](http
 </p>
 
 # Pre-process
+The public datasets can be downloaded from [MoNuSeg](https://monuseg.grand-challenge.org/Data/) and (Glas link). These datasets should be placed into the appropriate folders within the pre_process directory to undergo data preprocessing for our specified method. Our proposed HN dataset will be made available for research purposes in the future.
 
 # Pretrain
 One can run the following script using multi-gpus for generative self-supervision using diffusion. Change the path of the unlabeled images directory on which we need to pretrain on, in the script "./GenSelfDiff/pretrain/utils.py". 
