@@ -87,7 +87,8 @@ for item in glob.glob(Annotated_Images_folder):
                     column = positions['x'] if positions['x'] == 0 else positions['x'] - 1
                     temp_list.append([[column, row]])
                 contours.append(np.array(temp_list))
-            cv2.drawContours(image_label, contours, -1, colors[LABELS[cancer_cell_key]-1], thickness=cv2.FILLED)
+            # cv2.drawContours(image_label, contours, -1, colors[LABELS[cancer_cell_key]-1], thickness=cv2.FILLED) # for color segmentation map
+            cv2.drawContours(image_label, contours, -1, LABELS[cancer_cell_key], thickness=cv2.FILLED)
 
         io.imsave(OUT_IMAGE_PATH, IMAGE)
         io.imsave(OUT_LABEL_PATH, image_label)
