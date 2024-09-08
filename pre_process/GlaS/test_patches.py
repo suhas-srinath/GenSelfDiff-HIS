@@ -1,3 +1,5 @@
+# This script is used to obtain the test image-label patches form the full-scale image-labels
+
 from PIL import Image
 from torchvision.transforms import transforms
 import torch
