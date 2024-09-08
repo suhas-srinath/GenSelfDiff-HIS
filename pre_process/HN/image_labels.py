@@ -23,6 +23,7 @@ print('=====================================================')
 indexing = 0
 length = 0
 len_list = []
+all_masks_list = []
 for item in glob.glob(Annotated_Images_folder):
     Images_with_Annotations = []
     print(item)
@@ -90,6 +91,7 @@ for item in glob.glob(Annotated_Images_folder):
 
         io.imsave(OUT_IMAGE_PATH, IMAGE)
         io.imsave(OUT_LABEL_PATH, image_label)
+        all_masks_list.append(image_label)
 
         indexing = indexing + 1
         # print('----------------------------------------------------')
@@ -98,3 +100,7 @@ for item in glob.glob(Annotated_Images_folder):
     # print('{} image-label pairs are created'.format(length))
 print(len(len_list))
 
+masks = np.array(all_masks_list)
+path = os.path.join('./data', 'masks.mat')
+mdic = {"data": masks, "label": "labels"}
+savemat(path, mdic)
