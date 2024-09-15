@@ -10,29 +10,29 @@ This is the official repository for the implementation of [GenSelfDiff-HIS](http
  </p>
  
  <p align="center">
-  <em>Fig-1: An overview of the proposed framework. (a) Self-supervised pre-training using diffusion: The U-Net model (encoder-decoder) takes the corrupted version $mathbf{x}_t$  of the image $\mathbf{x}_0$ and the corresponding time embedding $t_e$ as the input to predict the noise that takes $\mathbf{x}_0$ to $\mathbf{x}_t$, using the P2 weighted loss. $f(\cdot)$ denotes the function that recovers $\mathbf{x}_{t-1}$ from $\mathbf{x}_t$. (b) Downstream segmentation: The self-supervised pre-trained U-Net is fine-tuned end-to-end in a supervised manner to predict the segmentation masks.</em>
+  <em>Fig-1: An overview of the proposed framework.</em>
 </p>
 
-# Pre-process
-The public datasets can be downloaded from [MoNuSeg](https://monuseg.grand-challenge.org/Data/) and (Glas link). These datasets should be placed into the appropriate folders within the pre_process directory to undergo data preprocessing for our specified method. Our proposed HN dataset will be made available for research purposes in the future.
+# Data Pre-processing
+The public datasets can be downloaded from [MoNuSeg](https://monuseg.grand-challenge.org/Data/) and [GlaS](https://www.kaggle.com/datasets/sani84/glasmiccai2015-gland-segmentation). These datasets should be placed into the appropriate folders within the pre_process directory to undergo data preprocessing for our specified method. Our proposed HN dataset will be made available for research purposes in the future.
 
-# Pretrain
-One can run the following script using multi-gpus for generative self-supervision using diffusion. Change the path of the unlabeled images directory on which we need to pretrain on, in the script "./GenSelfDiff/pretrain/utils.py". 
+# Pre-training
+One can run the following script using multi-gpus for generative self-supervision using diffusion. Specify the path to the directory of the unlabeled images on which pre-training needs to be done in the script "pretrain/utils.py". 
 <pre> CUDA_VISIBLE_DEVICES=0,1,2,3 python3 ./GenSelfDiff/pretrain/SS_diff.py </pre>
 
-# Downstream train
+# Downstream Training for Segmentation
 One can run the following script using multi-gpus for the downstream segmentation task on the pretrained generative self-supervision using diffusion. Change the path of the images, labels, and pre-trained model in the script "./GenSelfDiff/downstream_train/Diff_Seg.py". 
 <pre> CUDA_VISIBLE_DEVICES=0,1,2,3 python3 ./GenSelfDiff/downstream_train/Diff_Seg.py </pre>
 
 # Evaluation
-One can run the following script metric evaluation on the downstream segmentation train model. Change the path of the images, labels, and downstream model in the script "./GenSelfDiff/test/test_script.py". 
+One can run the following script for evaluation on the trained segmentation model. Specify the path of the images, labels, and the model in the script "./GenSelfDiff/test/test_script.py". 
 <pre> python3 ./GenSelfDiff/test/test_script.py </pre>
 
 # Baselines
 The git-hub repositories for some of the baselines are: [CS-CO](https://github.com/easonyang1996/CS-CO/tree/main) | [Wolleb et al.](https://github.com/JuliaWolleb/Diffusion-based-Segmentation/tree/main) | [Baranchuk et al.](https://github.com/yandex-research/ddpm-segmentation/tree/master) | [CIMD](https://github.com/aimansnigdha/Ambiguous-Medical-Image-Segmentation-using-Diffusion-Models) | [MedSegDiff](https://github.com/MedicineToken/MedSegDiff) | [FCT](https://github.com/Thanos-DB/FullyConvolutionalTransformer)
 
 # Acknowledgment
-The code implementation for our Self-Supervision using the Attention-based UNet architecture has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023)
+The code implementation for the Attention-based UNet architecture has been adopted from [Diffusion](https://colab.research.google.com/github/huggingface/notebooks/blob/main/examples/annotated_diffusion.ipynb#scrollTo=3a159023).
 # Citation
 <pre>
 @ARTICLE{10663482,
