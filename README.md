@@ -14,7 +14,7 @@ This is the official repository for the implementation of [GenSelfDiff-HIS](http
 </p>
 
 # Data Pre-processing
-The public datasets can be downloaded from [MoNuSeg](https://monuseg.grand-challenge.org/Data/) and [GlaS](https://www.kaggle.com/datasets/sani84/glasmiccai2015-gland-segmentation). These datasets should be placed into the appropriate folders within the pre_process directory to undergo data preprocessing for our specified method. Our proposed HN dataset will be made available for research purposes in the future.
+The public datasets can be downloaded from [MoNuSeg](https://monuseg.grand-challenge.org/Data/) and [GlaS](https://www.kaggle.com/datasets/sani84/glasmiccai2015-gland-segmentation). These datasets should be placed into the appropriate folders within the pre_process directory for data pre-processing. Our proposed HN dataset will be made available for research purposes in the future.
 
 # Pre-training
 One can run the following script using multi-gpus for generative self-supervision using diffusion. Specify the path to the directory of the unlabeled images on which pre-training needs to be done in the script "pretrain/utils.py". 
