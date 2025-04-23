@@ -36,13 +36,13 @@ The code implementation for the Attention-based UNet architecture has been adopt
 # Citation
 <pre>
 @ARTICLE{10663482,
-  author={Purma, Vishnuvardhan and Srinath, Suhas and Srirangarajan, Seshan and Kakkar, Aanchal and Prathosh, A.P.},
+  author={Purma, Vishnuvardhan and Srinath, Suhas and Srirangarajan, Seshan and Kakkar, Aanchal and Prathosh, A. P.},
   journal={IEEE Transactions on Medical Imaging}, 
   title={GenSelfDiff-HIS: Generative Self-Supervision Using Diffusion for Histopathological Image Segmentation}, 
-  year={2024},
-  volume={},
-  number={},
-  pages={1-1},
-  keywords={Task analysis;Image segmentation;Diffusion models;Biomedical imaging;Annotations;Image analysis;Histopathology;Diffusion;H&E-stained Histopathological Images;Representation Learning;Self-Supervised Learning},
+  year={2025},
+  volume={44},
+  number={2},
+  pages={618-631},
+  keywords={Task analysis;Image segmentation;Diffusion models;Biomedical imaging;Annotations;Image analysis;Histopathology;Diffusion;H&E-stained histopathological images;representation learning;self-supervised learning},
   doi={10.1109/TMI.2024.3453492}}
 </pre>
